@@ -2,6 +2,9 @@ const express = require("express");
 const contacts = require("../controllers/contact.controller");
 const router = express.Router();
 
+router.get('/contacts', (req, res) => {
+    res.send('Get contacts');
+});
 
 router.route("/")
     .get(contacts.findAll)
